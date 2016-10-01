@@ -1,4 +1,10 @@
-node_modules
+.idea/
+node_modules/
+build/
 npm-debug.log
+npm-debug.log.*
+.eslintcache
+
+develop/config/appConfig.js
+
 .DS_Store
-dist
