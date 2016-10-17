@@ -51,6 +51,24 @@ button {
     color: red;
 }
 
+.groups {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add {
+    font-weight: 900;
+}
+
+.group a {
+    cursor: pointer;
+}
+
+.group {
+    text-align: center;
+    margin: 10px;
+}
+
 @media (max-width: 800px) {
     .word {
         margin-bottom: 0;
@@ -58,5 +76,9 @@ button {
 
     .buttonWrap {
         flex-direction: row;
+    }
+
+    .groups {
+        flex-wrap: wrap;
     }
 }
