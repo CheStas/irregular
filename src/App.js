@@ -1,3 +1,7 @@
+//TODO возможность добавление/удаления слов из списка группами
+//TODO показать все слова которые сейчас в списке
+//TODO озвучка слов слов read(v2-v3) had to, been able
+
 import React, { Component } from 'react';
 import './App.css';
 
@@ -7,10 +11,10 @@ export default class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-        rus: ['Ломать(ся)', 'Приносить', 'Строить', 'Гореть, сжигать', 'Покупать', 'Уметь, мочь', 'Ловить', 'Выбирать', 'Падать', 'Кормить', 'Приходить','Стоить', 'Ползать, красться', 'Резать','Делать', 'Рисовать', 'Мечтать, видеть сны','Пить', 'Ехать, везти', 'Есть, поедать', 'Драться, сражаться', 'Находить', 'Летать', 'Запрещать', 'Забывать', 'Получать, становиться', 'Давать','Идти','Расти, вырастать', 'Вешать, висеть', 'Прятать(ся)', 'Ударять', 'Держать, проводить', 'Причинять боль', 'Хранить', 'Стоять на коленях', 'Знать', 'Класть(прокладывать, лежать, возложить)', 'Вести, руководить', 'Учить', 'Покидать', 'Давать взаймы', 'Позволять', 'Лежать', 'Зажигать свет', 'Терять', 'Делать(производить)', 'Означать', 'Встречать', 'Быть должным', 'Платить', 'Класть(ставить, помещать)', 'Бросать, прекращать', 'Читать', 'Ехать верхом', 'Звонить', 'Вставать', 'Бежать', 'Сказать', 'Видеть'],
-        eng: ['break', 'bring', 'build', 'burn', 'buy', 'can', 'catch', 'choose', 'fall', 'feed', 'come', 'cost', 'creep', 'cut', 'do', 'draw', 'dream','drink', 'drive', 'eat', 'fight', 'find', 'fly', 'forbid', 'forget', 'get', 'give','go','grow', 'hang', 'hide', 'hit', 'hold', 'hurt', 'keep', 'kneel', 'know', 'lay', 'lead', 'learn', 'leave', 'lend', 'let', 'lie', 'light', 'lose', 'make', 'mean', 'meet', 'must', 'pay', 'put', 'quit', 'read', 'ride', 'ring', 'rise', 'run', 'say', 'see'],
-        eng2: ['broke', 'brought', 'built', 'burnt', 'bought', 'could', 'caught', 'chose', 'fell', 'fed', 'came', 'cost', 'crept', 'cut', 'did', 'drew', 'dreamt','drank', 'drove', 'ate', 'fought', 'found', 'flew', 'forbade', 'forgot', 'got', 'gave','went','grew', 'hung', 'hid', 'hit', 'held', 'hurt', 'kept', 'knelt', 'knew', 'laid', 'led', 'learnt', 'left', 'lent', 'let', 'lay', 'lit', 'lost', 'made', 'meant', 'met', 'had to', 'paid', 'put', 'quit', 'read', 'rode', 'rang', 'rose', 'ran', 'said', 'saw'],
-        eng3: ['broken', 'brought', 'built', 'burnt', 'bought', 'been able', 'caught', 'chosen', 'fallen', 'fed', 'come', 'cost', 'crept', 'cut', 'done', 'drawn', 'dreamt','drunk', 'driven', 'eaten', 'fought', 'found', 'flown', 'forbidden', 'forgotten', 'got', 'given','gone','grown', 'hung', 'hidden', 'hit', 'held', 'hurt', 'kept', 'knelt', 'known', 'laid', 'led', 'learnt', 'left', 'lent', 'let', 'lain', 'lit', 'lost', 'made', 'meant', 'met', 'had to', 'paid', 'put', 'quit', 'read', 'ridden', 'rung', 'risen', 'run', 'said', 'seen'],
+        rus: ['Ломать(ся)', 'Приносить', 'Строить', 'Гореть, сжигать', 'Покупать', 'Уметь, мочь', 'Ловить', 'Выбирать', 'Падать', 'Кормить', 'Приходить','Стоить', 'Ползать, красться', 'Резать','Делать', 'Рисовать', 'Мечтать, видеть сны','Пить', 'Ехать, везти', 'Есть, поедать', 'Драться, сражаться', 'Находить', 'Летать', 'Запрещать', 'Забывать', 'Получать, становиться', 'Давать','Идти','Расти, вырастать', 'Вешать, висеть', 'Прятать(ся)', 'Ударять', 'Держать, проводить', 'Причинять боль', 'Хранить', 'Стоять на коленях', 'Знать', 'Класть(прокладывать, лежать, возложить)', 'Вести, руководить', 'Учить', 'Покидать', 'Давать взаймы', 'Позволять', 'Лежать', 'Зажигать свет', 'Терять', 'Делать(производить)', 'Означать', 'Встречать', 'Быть должным', 'Платить', 'Класть(ставить, помещать)', 'Бросать, прекращать', 'Читать', 'Ехать верхом', 'Звонить', 'Вставать', 'Бежать', 'Сказать', 'Видеть', 'Искать, разыскивать', 'Продавать', 'Посылать', 'Ставить', 'Шить', 'Трясти', 'Светить', 'Стрелять', 'Показывать', 'Закрывать', 'Петь', 'Тонуть', 'Сидеть', 'Спать', 'Скользить', 'Чувствовать запах', 'Говорить', 'Мчаться', 'Произносить по буквам, заколдовывать', 'Тратить'],
+        eng: ['break', 'bring', 'build', 'burn', 'buy', 'can', 'catch', 'choose', 'fall', 'feed', 'come', 'cost', 'creep', 'cut', 'do', 'draw', 'dream','drink', 'drive', 'eat', 'fight', 'find', 'fly', 'forbid', 'forget', 'get', 'give','go','grow', 'hang', 'hide', 'hit', 'hold', 'hurt', 'keep', 'kneel', 'know', 'lay', 'lead', 'learn', 'leave', 'lend', 'let', 'lie', 'light', 'lose', 'make', 'mean', 'meet', 'must', 'pay', 'put', 'quit', 'read', 'ride', 'ring', 'rise', 'run', 'say', 'see', 'seek', 'sell', 'send', 'set', 'sew', 'shake', 'shine', 'shoot', 'show', 'shut', 'sing', 'sink', 'sit', 'sleep', 'slide', 'smell', 'speak', 'speed', 'spell', 'spend'],
+        eng2: ['broke', 'brought', 'built', 'burnt', 'bought', 'could', 'caught', 'chose', 'fell', 'fed', 'came', 'cost', 'crept', 'cut', 'did', 'drew', 'dreamt','drank', 'drove', 'ate', 'fought', 'found', 'flew', 'forbade', 'forgot', 'got', 'gave','went','grew', 'hung', 'hid', 'hit', 'held', 'hurt', 'kept', 'knelt', 'knew', 'laid', 'led', 'learnt', 'left', 'lent', 'let', 'lay', 'lit', 'lost', 'made', 'meant', 'met', 'had to', 'paid', 'put', 'quit', 'read', 'rode', 'rang', 'rose', 'ran', 'said', 'saw', 'sought', 'sold', 'sent', 'set', 'sewed', 'shook', 'shone', 'shot', 'showed', 'shut', 'sang', 'sank', 'sat', 'slept','slid', 'smelt', 'spoke', 'sped', 'spelt', 'spent'],
+        eng3: ['broken', 'brought', 'built', 'burnt', 'bought', 'been able', 'caught', 'chosen', 'fallen', 'fed', 'come', 'cost', 'crept', 'cut', 'done', 'drawn', 'dreamt','drunk', 'driven', 'eaten', 'fought', 'found', 'flown', 'forbidden', 'forgotten', 'got', 'given','gone','grown', 'hung', 'hidden', 'hit', 'held', 'hurt', 'kept', 'knelt', 'known', 'laid', 'led', 'learnt', 'left', 'lent', 'let', 'lain', 'lit', 'lost', 'made', 'meant', 'met', 'had to', 'paid', 'put', 'quit', 'read', 'ridden', 'rung', 'risen', 'run', 'said', 'seen', 'sought', 'sold', 'sent', 'set', 'sewn', 'shaken', 'shone', 'shot', 'shown', 'shut', 'sung', 'sunk', 'sat', 'slept', 'slid', 'smelt', 'spoken', 'sped', 'spelt', 'spent'],
       groups: {
           one: {
               rus: ['Ломать(ся)', 'Приносить', 'Строить', 'Гореть, сжигать', 'Покупать', 'Уметь, мочь', 'Ловить', 'Выбирать', 'Падать', 'Кормить'],
@@ -61,34 +65,34 @@ export default class App extends Component {
               add: false
           },
           seven: {
-              rus: [],
-              eng: [],
-              eng2: [],
-              eng3: []
+              rus: ['Искать, разыскивать', 'Продавать', 'Посылать', 'Ставить', 'Шить', 'Трясти', 'Светить', 'Стрелять', 'Показывать', 'Закрывать'],
+              eng: ['seek', 'sell', 'send', 'set', 'sew', 'shake', 'shine', 'shoot', 'show', 'shut'],
+              eng2: ['sought', 'sold', 'sent', 'set', 'sewed', 'shook', 'shone', 'shot', 'showed', 'shut'],
+              eng3: ['sought', 'sold', 'sent', 'set', 'sewn', 'shaken', 'shone', 'shot', 'shown', 'shut']
           },
           eight: {
-              rus: [],
-              eng: [],
-              eng2: [],
-              eng3: []
+              rus: ['Петь', 'Тонуть', 'Сидеть', 'Спать', 'Скользить', 'Чувствовать запах', 'Говорить', 'Мчаться', 'Произносить по буквам, заколдовывать', 'Тратить'],
+              eng: ['sing', 'sink', 'sit', 'sleep', 'slide', 'smell', 'speak', 'speed', 'spell', 'spend'],
+              eng2: ['sang', 'sank', 'sat', 'slept','slid', 'smelt', 'spoke', 'sped', 'spelt', 'spent'],
+              eng3: ['sung', 'sunk', 'sat', 'slept', 'slid', 'smelt', 'spoken', 'sped', 'spelt', 'spent']
           },
           nine: {
-              rus: [],
-              eng: [],
-              eng2: [],
-              eng3: []
+              rus: ['Испорть', 'Стоять', 'Красть', 'Вонзать', 'Клясться, богохульствовать', 'Мести, подметать', 'Плавать', 'Качать', 'Брать', 'Обучать'],
+              eng: ['spoil', 'stand', 'steal', 'stick', 'swear', 'sweep', 'swim', 'swing', 'take', 'teach'],
+              eng2: ['spoilt', 'stood', 'stole', 'stuck', 'swore', 'swept', 'swam', 'swung', 'took', 'taught'],
+              eng3: ['spoilt', 'stood', 'stolen', 'stuck', 'sworn', 'swept', 'swum', 'swung', 'taken', 'taught']
           },
           ten: {
-              rus: [],
-              eng: [],
-              eng2: [],
-              eng3: []
+              rus: ['Рвать', 'Рассказывать', 'Думать', 'Бросать', 'Понимать', 'Расстраивать, огорчать', 'Просыпаться', 'Носить'],
+              eng: ['tear', 'tell', 'think', 'thorow', 'understand', 'upset', 'wake', 'wear'],
+              eng2: ['tore', 'told', 'thought', 'threw', 'understood', 'upset', 'woke', 'wore'],
+              eng3: ['torn', 'told', 'thought', 'thrown', 'understood', 'upset', 'woken', 'worn']
           },
           eleven: {
-              rus: [],
-              eng: [],
-              eng2: [],
-              eng3: []
+              rus: ['Плакать, рыдать', 'Выигрывать', 'Проветривать, вентилировать', 'Отстранять, снимать деньги', 'Крутить, скурчивать', 'Писать'],
+              eng: ['weep', 'win', 'wind', 'withdraw', 'wring', 'write'],
+              eng2: ['wept', 'won', 'wound', 'withdrew', 'wrung', 'wtore'],
+              eng3: ['wept', 'won', 'wound', 'withdrawn', 'wrung', 'written']
           },
       },
       index: 0,
@@ -124,7 +128,7 @@ export default class App extends Component {
   }
 
   getRandomInt() {
-    //   console.log(this.state.rus, this.state.eng, this.state.eng2, this.state.eng3)
+    //console.log(this.state.rus, this.state.eng, this.state.eng2, this.state.eng3)
     this.refs['eng'].focus()
     this.refs['eng'].value = ''
     this.refs['eng2'].value = ''
