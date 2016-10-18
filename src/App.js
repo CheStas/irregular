@@ -1,5 +1,3 @@
-//TODO возможность добавление/удаления слов из списка группами
-//TODO показать все слова которые сейчас в списке
 //TODO озвучка слов слов read(v2-v3) had to, been able
 
 import React, { Component } from 'react';
@@ -82,6 +80,24 @@ export default class App extends Component {
               eng2: ['wept', 'won', 'wound', 'withdrew', 'wrung', 'wrote'],
               eng3: ['wept', 'won', 'wound', 'withdrawn', 'wrung', 'written']
           },
+          week1: {
+              rus: ['возникать', 'будить, просыпаться', 'быть', 'выдерживать', 'бить', 'ставить', 'начинать', 'гнуть', 'биться об заклад, делать ставку', 'предлагать цену, заявка', 'кусать', 'кровотчить', 'дуть', 'ломать', 'приносить', 'строить', 'гореть', 'взрываться', 'покупать', 'ловить', 'выбирать', 'цепляться', 'приходить', 'стоить', 'ползать, красться', 'резать', 'делить, раздавать', 'копать', 'делать', 'рисовать'],
+              eng: ['arise', 'awake', 'be', 'bear', 'beat', 'become', 'begin', 'bend', 'bet', 'bid', 'bite', 'bleed', 'blow', 'break', 'bring', 'build', 'burn', 'burst', 'buy', 'catch', 'choose', 'cling', 'come', 'cost', 'creep', 'cut', 'deal', 'dig', 'do', 'draw'],
+              eng2: ['arose', 'awoke', 'was/were', 'bore', 'beat', 'became', 'began', 'bent', 'bet', 'bade', 'bit', 'bled', 'blew', 'broke', 'brought', 'built', 'burnt', 'burst', 'bought', 'caught', 'chose', 'clung', 'came', 'cost', 'crept', 'cut', 'dealt', 'dug', 'did', 'drew'],
+              eng3: ['arisen', 'awoken', 'been', 'borne', 'beaten', 'become', 'begun', 'bent', 'bet', 'bidden','bitten', 'bled', 'blown', 'broken', 'brought', 'built', 'burnt', 'burst', 'bought', 'caught', 'chosen', 'clung', 'come', 'cost', 'crept', 'cut', 'dealt' , 'dug', 'done', 'drawn']
+          },
+          week2: {
+              rus: ['мечтать', 'пить', 'водить', 'обитать', 'есть', 'падать', 'кормить', 'чувствовать', 'драться', 'находить', 'соответствовать, подходить', 'швырять, бросать', 'летать', 'запрещать', 'забывать', 'прощать', 'оставлять, отказываться', 'замерзать', 'получать', 'давать', 'идти', 'тереть, молоть', 'рости', 'писать от руки', 'вешать', 'иметь', 'слышать', 'прятать', 'бить', 'держать'],
+              eng: ['dream', 'drink', 'drive', 'dwell', 'eat', 'fall', 'feed','fell', 'fight', 'find', 'fit', 'fling', 'fly', 'forbid', 'forget', 'forgive', 'forsake', 'freeze', 'get', 'give', 'go', 'gring', 'grow', 'handwrite', 'hang', 'have', 'hear', 'hide', 'hit', 'hold'],
+              eng2: ['dreamt', 'drank', 'drove', 'dwelt', 'ate', 'fell', 'fed', 'felt', 'fought', 'found', 'fit', 'flung', 'flew', 'forbade', 'forgot', 'forgave', 'forsook', 'froze', 'got', 'gave', 'went', 'ground', 'grew', 'handwrote', 'hung', 'had', 'heard', 'hid', 'hit', 'held'],
+              eng3: ['dreamt', 'drunk', 'driven', 'dwelt', 'eaten', 'fallen', 'fed', 'felt', 'fought', 'found', 'fit', 'flung', 'flown', 'forbidden', 'forgotten', 'forgiven', 'forsaken', 'frozen', 'got', 'given', 'gone', 'ground', 'grown', 'handwritten', 'hung', 'had', 'heard', 'hidden', 'hit', 'held']
+          },
+          week3: {
+              rus: ['Причинять боль', 'сохранять, держать', 'стоять на коленях', 'вязать', 'знать','класть', 'вести, руководить', 'опираться', 'подпрыгивать', 'учиться','оставлять, покидать', 'давать в долг', 'позволять', 'лежать', 'светить','терять', 'делать, производить', 'означать', 'встречать', 'платить', 'доказывать, подтверждать', 'ставить, ложить', 'покидать, увольнять', 'читать', 'ездить верхом','звонить', 'вставать', 'бежать', 'пилить', 'говорить'],
+              eng: ['hurt', 'keep', 'kneel', 'knit', 'know', 'lay', 'lead', 'lean', 'leap', 'learn', 'leave', 'lend', 'let','lie', 'light', 'lose', 'make', 'mean','meet', 'pay', 'prove', 'put', 'quit', 'read', 'ride', 'ring', 'rise', 'run', 'saw', 'say'],
+              eng2: ['hurt', 'kept', 'knelt', 'knit', 'knew', 'laid', 'led', 'leant', 'leapt', 'learnt', 'left', 'lent', 'let','lay', 'lit', 'lost', 'made', 'meant', 'met', 'paid', 'proved', 'put', 'quit', 'read', 'rode', 'rang', 'rose', 'ran', 'sawed', 'said'],
+              eng3: ['hurt', 'kept', 'knelt', 'knit', 'known', 'laid', 'led', 'leant', 'leapt', 'learnt', 'left', 'lent', 'let', 'lain', 'lit', 'lost', 'made', 'meant', 'met', 'paid', 'proven', 'put', 'quit', 'read', 'ridden', 'rung', 'risen', 'run', 'sawn', 'said']
+          }
       },
       show1: false,
       add1: true,
@@ -105,6 +121,12 @@ export default class App extends Component {
       add10: true,
       show11: false,
       add11: true,
+      showWeek1: false,
+      addWeek1: false,
+      showWeek2: false,
+      addWeek2: false,
+      showWeek3: false,
+      addWeek3: false,
       index: 0,
       input1: {
         borderColor: 'grey'
@@ -137,8 +159,7 @@ export default class App extends Component {
   }
 
   getRandomInt() {
-    //console.log(this.state.rus, this.state.eng, this.state.eng2, this.state.eng3)
-
+      
     this.setState({
         rus: [].concat(
                 this.state.add1 ? this.state.groups.one.rus : [],
@@ -151,7 +172,10 @@ export default class App extends Component {
                 this.state.add8 ? this.state.groups.eight.rus : [],
                 this.state.add9 ? this.state.groups.nine.rus : [],
                 this.state.add10 ? this.state.groups.ten.rus : [],
-                this.state.add11 ? this.state.groups.eleven.rus : []
+                this.state.add11 ? this.state.groups.eleven.rus : [],
+                this.state.addWeek1 ? this.state.groups.week1.rus : [],
+                this.state.addWeek2 ? this.state.groups.week2.rus : [],
+                this.state.addWeek3 ? this.state.groups.week3.rus : []
             ),
         eng: [].concat(
                 this.state.add1 ? this.state.groups.one.eng : [],
@@ -164,7 +188,10 @@ export default class App extends Component {
                 this.state.add8 ? this.state.groups.eight.eng : [],
                 this.state.add9 ? this.state.groups.nine.eng : [],
                 this.state.add10 ? this.state.groups.ten.eng : [],
-                this.state.add11 ? this.state.groups.eleven.eng : []
+                this.state.add11 ? this.state.groups.eleven.eng : [],
+                this.state.addWeek1 ? this.state.groups.week1.eng : [],
+                this.state.addWeek2 ? this.state.groups.week2.eng : [],
+                this.state.addWeek3 ? this.state.groups.week3.eng : []
             ),
         eng2: [].concat(
                 this.state.add1 ? this.state.groups.one.eng2 : [],
@@ -177,7 +204,10 @@ export default class App extends Component {
                 this.state.add8 ? this.state.groups.eight.eng2 : [],
                 this.state.add9 ? this.state.groups.nine.eng2 : [],
                 this.state.add10 ? this.state.groups.ten.eng2 : [],
-                this.state.add11 ? this.state.groups.eleven.eng2 : []
+                this.state.add11 ? this.state.groups.eleven.eng2 : [],
+                this.state.addWeek1 ? this.state.groups.week1.eng2 : [],
+                this.state.addWeek2 ? this.state.groups.week2.eng2 : [],
+                this.state.addWeek3 ? this.state.groups.week3.eng2 : []
             ),
         eng3: [].concat(
                 this.state.add1 ? this.state.groups.one.eng3 : [],
@@ -190,7 +220,10 @@ export default class App extends Component {
                 this.state.add8 ? this.state.groups.eight.eng3 : [],
                 this.state.add9 ? this.state.groups.nine.eng3 : [],
                 this.state.add10 ? this.state.groups.ten.eng3 : [],
-                this.state.add11 ? this.state.groups.eleven.eng3 : []
+                this.state.add11 ? this.state.groups.eleven.eng3 : [],
+                this.state.addWeek1 ? this.state.groups.week1.eng3 : [],
+                this.state.addWeek2 ? this.state.groups.week2.eng3 : [],
+                this.state.addWeek3 ? this.state.groups.week3.eng3 : []
             )
         })
     this.refs['eng'].focus()
@@ -448,6 +481,36 @@ export default class App extends Component {
               show11: !this.state.show11
          })
      }
+     if (e.target.id === 'addWeek1') {
+         this.setState({
+             addWeek1: !this.state.addWeek1
+         })
+     }
+     if (e.target.id === 'showWeek1') {
+         this.setState({
+              showWeek1: !this.state.showWeek1
+         })
+     }
+     if (e.target.id === 'addWeek2') {
+         this.setState({
+             addWeek2: !this.state.addWeek2
+         })
+     }
+     if (e.target.id === 'showWeek2') {
+         this.setState({
+              showWeek2: !this.state.showWeek2
+         })
+     }
+     if (e.target.id === 'addWeek3') {
+         this.setState({
+             addWeek3: !this.state.addWeek3
+         })
+     }
+     if (e.target.id === 'showWeek3') {
+         this.setState({
+              showWeek3: !this.state.showWeek3
+         })
+     }
   }
 
   render() {
@@ -553,6 +616,27 @@ export default class App extends Component {
                 <p><a id="add11" className={this.state.add11 && 'add'}>add group11</a></p>
                 <p><a id="show11">show group11</a></p>
                 {this.state.show11 && this.state.groups.eleven.eng.map(function (el) {
+                    return <p>{el}</p>
+                })}
+            </div>
+            <div className="group">
+                <p><a id="addWeek1" className={this.state.addWeek1 && 'add'}>add week1</a></p>
+                <p><a id="showWeek1">show week1</a></p>
+                {this.state.showWeek1 && this.state.groups.week1.eng.map(function (el) {
+                    return <p>{el}</p>
+                })}
+            </div>
+            <div className="group">
+                <p><a id="addWeek2" className={this.state.addWeek2 && 'add'}>add week2</a></p>
+                <p><a id="showWeek2">show week2</a></p>
+                {this.state.showWeek2 && this.state.groups.week2.eng.map(function (el) {
+                    return <p>{el}</p>
+                })}
+            </div>
+            <div className="group">
+                <p><a id="addWeek3" className={this.state.addWeek3 && 'add'}>add week3</a></p>
+                <p><a id="showWeek3">show week3</a></p>
+                {this.state.showWeek3 && this.state.groups.week3.eng.map(function (el) {
                     return <p>{el}</p>
                 })}
             </div>
